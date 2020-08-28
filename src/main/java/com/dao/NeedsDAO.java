@@ -19,7 +19,7 @@ public class NeedsDAO {
 	}
 
 	public List<Needs> getMyNeeds(Customer customer) {
-		List<Needs> needsList = (List)HibernateTemplate.getObjectListById( Needs.class, "customer", customer);
-		return needsList;
+		//List<Needs> needsList = (List)HibernateTemplate.getObjectListById( Needs.class, "customer", customer);
+		return null;
 	}
 }

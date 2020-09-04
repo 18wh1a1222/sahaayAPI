@@ -100,12 +100,12 @@ public class MyResource {
 		
 	}
 	
-	@Path("getMyNeeds")
+	@Path("getMyNeeds/{customerId}")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON) 
-	public List<Needs> getMyNeeds(Customer customer) {
+	public List<Needs> getMyNeeds(@PathParam ("customerId") int customerId) {
 		NeedsDAO needdao = new NeedsDAO();
-		List<Needs> needList = needdao.getMyNeeds(customer);
+		List<Needs> needList = needdao.getMyNeeds(customerId);
 		return needList;
 		
 	}

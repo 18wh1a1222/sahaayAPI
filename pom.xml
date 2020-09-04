@@ -10,7 +10,7 @@
 	<name>sahaayAPI</name>
 
 	<build>
-		<finalName>sahaayAPI</finalName>
+		<finalName>sahaay-api</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

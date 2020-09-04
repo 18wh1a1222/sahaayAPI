@@ -1,11 +1,9 @@
 package com.dao;
 
-import com.dto.Customer;
-import com.dto.Needs;
-
 import java.util.List;
 
 import com.db.HibernateTemplate;
+import com.dto.Needs;
 
 public class NeedsDAO {
 	public int register(Needs need) {	
@@ -18,8 +16,9 @@ public class NeedsDAO {
 		return needsList;
 	}
 
-	public List<Needs> getMyNeeds(Customer customer) {
-		//List<Needs> needsList = (List)HibernateTemplate.getObjectListById( Needs.class, "customer", customer);
-		return null;
+	public List<Needs> getMyNeeds(int customerId) {
+		String query = "from Needs where customerId =" + customerId;
+		List<Needs> needsList = (List)HibernateTemplate.getObjectListByQuery(query);
+		return needsList;
 	}
 }

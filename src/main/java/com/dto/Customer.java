@@ -11,10 +11,11 @@ import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "customerId")
-
+//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "customerId")
+@JsonIgnoreProperties(allowSetters = true, value = { "needsList" })
 @XmlRootElement
 @Entity
 public class Customer {

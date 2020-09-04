@@ -13,6 +13,7 @@ import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Restrictions;
 
 import com.dto.Customer;
+import com.dto.Needs;
 import com.dto.Volunteer;
 
 
@@ -111,7 +112,7 @@ public class HibernateTemplate {
 	
 
 
-	public static List<Object> getObjectListByQuery(String query)
+	public static List<Needs> getObjectListByQuery(String query)
 	{
 		return sessionFactory.openSession().createQuery(query).list();
 	}

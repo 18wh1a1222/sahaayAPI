@@ -20,7 +20,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 //@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "needId")
-@JsonIgnoreProperties(allowSetters = true, value = { "transList" })
+//@JsonIgnoreProperties(allowSetters = true, value = { "transList" })
 @XmlRootElement
 @Entity
 public class Needs {
